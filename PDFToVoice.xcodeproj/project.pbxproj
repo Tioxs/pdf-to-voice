@@ -1,0 +1,90 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+		A10000000000000000000001 /* PDFToVoiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* PDFToVoiceApp.swift */; };
+		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* ContentView.swift */; };
+		A10000000000000000000003 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ReaderView.swift */; };
+		A10000000000000000000005 /* ReaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* ReaderModel.swift */; };
+		A10000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* Assets.xcassets */; };
+
+		A20000000000000000000001 /* PDFToVoiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFToVoiceApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* ReaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000000000000000000007 /* PDFToVoice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFToVoice.entitlements; sourceTree = "<group>"; };
+		A20000000000000000000008 /* PDF to Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF to Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		A30000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000002 /* PDFToVoice */,
+				A30000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A30000000000000000000002 /* PDFToVoice */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* PDFToVoiceApp.swift */,
+				A20000000000000000000002 /* ContentView.swift */,
+				A20000000000000000000003 /* ReaderView.swift */,
+				A20000000000000000000005 /* ReaderModel.swift */,
+				A20000000000000000000006 /* Assets.xcassets */,
+				A20000000000000000000007 /* PDFToVoice.entitlements */,
+			);
+			path = PDFToVoice;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (A20000000000000000000008 /* PDF to Voice.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+
+		A40000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000005); runOnlyForDeploymentPostprocessing = 0; };
+		A40000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		A40000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000006); runOnlyForDeploymentPostprocessing = 0; };
+
+		A50000000000000000000001 /* PDFToVoice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002;
+			buildPhases = (A40000000000000000000001, A40000000000000000000002, A40000000000000000000003);
+			buildRules = ();
+			dependencies = ();
+			name = PDFToVoice;
+			productName = PDFToVoice;
+			productReference = A20000000000000000000008;
+			productType = "com.apple.product-type.application";
+		};
+
+		A60000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = {A50000000000000000000001 = {CreatedOnToolsVersion = 16.0;};};};
+			buildConfigurationList = A70000000000000000000001;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = A30000000000000000000001;
+			productRefGroup = A30000000000000000000003;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001);
+		};
+
+		A70000000000000000000001 = {isa = XCConfigurationList; buildConfigurations = (A80000000000000000000001, A80000000000000000000002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000002 = {isa = XCConfigurationList; buildConfigurations = (A80000000000000000000003, A80000000000000000000004); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+
+		A80000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 13.0; SDKROOT = macosx; SWIFT_VERSION = 5.0;}; name = Debug; };
+		A80000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 13.0; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0;}; name = Release; };
+		A80000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_ENTITLEMENTS = PDFToVoice/PDFToVoice.entitlements; CODE_SIGN_STYLE = Automatic; COMBINE_HIDPI_IMAGES = YES; CURRENT_PROJECT_VERSION = 4; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "PDF to Voice"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity"; MARKETING_VERSION = 0.2.2; PRODUCT_BUNDLE_IDENTIFIER = com.example.PDFToVoice; PRODUCT_NAME = "PDF to Voice"; SWIFT_EMIT_LOC_STRINGS = YES;}; name = Debug; };
+		A80000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CODE_SIGN_ENTITLEMENTS = PDFToVoice/PDFToVoice.entitlements; CODE_SIGN_STYLE = Automatic; COMBINE_HIDPI_IMAGES = YES; CURRENT_PROJECT_VERSION = 4; ENABLE_HARDENED_RUNTIME = YES; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "PDF to Voice"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity"; MARKETING_VERSION = 0.2.2; PRODUCT_BUNDLE_IDENTIFIER = com.example.PDFToVoice; PRODUCT_NAME = "PDF to Voice"; SWIFT_EMIT_LOC_STRINGS = YES;}; name = Release; };
+	};
+	rootObject = A60000000000000000000001;
+}
