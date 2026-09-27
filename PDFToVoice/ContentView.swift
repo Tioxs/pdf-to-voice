@@ -7,11 +7,35 @@ struct ContentView: View {
 
     var body: some View {
         Group {
-            if reader.document == nil {
+            if reader.isLoading {
+                ProgressView("PDF açılıyor…")
+                    .controlSize(.large)
+            } else if reader.document == nil {
                 emptyState
             } else {
                 ReaderView(openPDF: { isImporterPresented = true })
             }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .overlay(alignment: .bottom) {
+            if reader.document == nil && !reader.isLoading {
+                ZStack {
+                    HStack {
+                        Text("Sürüm \(appVersion)")
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                        Spacer()
+                    }
+                    githubLink
+                }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 12)
+            }
+        }
+        .dropDestination(for: URL.self) { urls, _ in
+            guard let url = urls.first, url.pathExtension.lowercased() == "pdf" else { return false }
+            reader.open(url)
+            return true
         }
         .fileImporter(
             isPresented: $isImporterPresented,
@@ -28,11 +52,11 @@ struct ContentView: View {
 
     private var emptyState: some View {
         VStack(spacing: 16) {
-            Image(systemName: "doc.text")
+                Image(systemName: "doc.text")
                 .font(.system(size: 52, weight: .light))
                 .foregroundStyle(.secondary)
 
-            Text("PDF Ses")
+            Text("Pdf//Voice")
                 .font(.largeTitle.weight(.semibold))
 
             Text("Bir PDF seç ve metni dinlemeye başla.")
@@ -45,8 +69,46 @@ struct ContentView: View {
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
             .keyboardShortcut("o", modifiers: .command)
+
+            Text("PDF'yi bu pencereye de sürükleyebilirsin.")
+                .font(.callout)
+                .foregroundStyle(.tertiary)
+
+                if !reader.recentDocuments.isEmpty {
+                    Divider().frame(width: 320).padding(.vertical, 6)
+                    HStack {
+                        Text("Son Kullanılanlar")
+                            .font(.headline)
+                        Spacer()
+                        Button("Temizle", role: .destructive) {
+                            reader.clearRecentDocuments()
+                        }
+                        .buttonStyle(.borderless)
+                    }
+                    .frame(width: 320)
+                    ForEach(reader.recentDocuments) { document in
+                        Button {
+                            reader.openRecent(document)
+                        } label: {
+                            Label(document.name, systemImage: "clock.arrow.circlepath")
+                                .frame(width: 300, alignment: .leading)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
         }
         .padding(40)
+    }
+
+    private var githubLink: some View {
+        Link(destination: URL(string: "https://github.com/tioxs/pdf-to-voice")!) {
+            Label("\"R\" made for it", systemImage: "arrow.up.right.square")
+        }
+        .buttonStyle(.link)
+    }
+
+    private var appVersion: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.2.2"
     }
 
     private var errorBinding: Binding<Bool> {

@@ -10,6 +10,7 @@
 		A10000000000000000000003 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ReaderView.swift */; };
 		A10000000000000000000005 /* ReaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* ReaderModel.swift */; };
 		A10000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* Assets.xcassets */; };
+		A10000000000000000000009 /* SpokenTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* SpokenTextView.swift */; };
 
 		A20000000000000000000001 /* PDFToVoiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFToVoiceApp.swift; sourceTree = "<group>"; };
 		A20000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -18,6 +19,7 @@
 		A20000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20000000000000000000007 /* PDFToVoice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFToVoice.entitlements; sourceTree = "<group>"; };
 		A20000000000000000000008 /* PDF to Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDF to Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000009 /* SpokenTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpokenTextView.swift; sourceTree = "<group>"; };
 
 		A30000000000000000000001 = {
 			isa = PBXGroup;
@@ -34,6 +36,7 @@
 				A20000000000000000000002 /* ContentView.swift */,
 				A20000000000000000000003 /* ReaderView.swift */,
 				A20000000000000000000005 /* ReaderModel.swift */,
+				A20000000000000000000009 /* SpokenTextView.swift */,
 				A20000000000000000000006 /* Assets.xcassets */,
 				A20000000000000000000007 /* PDFToVoice.entitlements */,
 			);
@@ -47,7 +50,7 @@
 			sourceTree = "<group>";
 		};
 
-		A40000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000005); runOnlyForDeploymentPostprocessing = 0; };
+		A40000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000005, A10000000000000000000009); runOnlyForDeploymentPostprocessing = 0; };
 		A40000000000000000000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 		A40000000000000000000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000006); runOnlyForDeploymentPostprocessing = 0; };
 

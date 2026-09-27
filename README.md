@@ -1,46 +1,45 @@
-# PDF to Voice
+# pdf/voice
 
-A minimal native macOS PDF-to-speech app with synchronized word highlighting.
+Senkronize kelime vurgulama özelliğine sahip, sade ve yerel bir macOS PDF seslendirme uygulaması.
 
-<!-- Add a screenshot here: docs/screenshot.png -->
+<!-- Ekran görüntüsü: docs/ss.png -->
 
-## Features
+## Özellikler
 
-- Open PDFs and read the extracted page text
-- Speak the current page with macOS system voices
-- Highlight the currently spoken word using the real speech callback
-- Pause, resume, change pages, and continue automatically across pages
-- Choose a system voice and adjust speech speed and pitch
-- Close the current PDF and return to the start screen
-- Light and Dark Mode support
+- PDF dosyalarını açma ve sayfalardaki metni çıkarma
+- Metni macOS sistem sesiyle seslendirme
+- Okumayı duraklatma, sürdürme ve sayfalar arasında otomatik ilerleme
+- Konuşma hızını ve ses tonunu ayarlama
+- Ses ve görünüm ayarlarını saklama
+- Son açılan belgeleri ve son okunan sayfayı hatırlama
+- PDF dosyalarını sürükleyip bırakarak açma
+- Apple Vision ile taranmış sayfalarda OCR çalıştırma
+- Açık ve koyu görünüm desteği
 
-## Requirements
+## Gereksinimler
 
-- macOS 13 or later
-- Xcode 15 or later
+- macOS 13 veya üzeri
+- Xcode 15 veya üzeri
 
-## Run
-
-1. Open `PDFToVoice.xcodeproj` in Xcode.
-2. Select the `PDFToVoice` scheme and **My Mac**.
-3. Press `⌘R`.
-
-Without opening Xcode, an Apple Silicon build can also be created with:
+## Çalıştırma
 
 ```bash
 zsh scripts/build.sh
 open "dist/PDF to Voice.app"
 ```
 
-## Tech Stack
+## Kullanılan Teknolojiler
 
-Swift, SwiftUI, PDFKit, AVFoundation, and AVSpeechSynthesizer. No third-party dependencies.
+Swift, SwiftUI, AppKit, PDFKit, AVFoundation ve Vision. Üçüncü taraf bağımlılık kullanılmaz.
 
-## Known Limitations
+## Bilinen Sınırlamalar
 
-- Scanned PDFs require OCR and are not supported yet.
-- The app focuses on listening and extracted text; it does not display the PDF page itself.
+- OCR işlemi şu anda her sayfa için kullanıcı tarafından başlatılır.
+- OCR ile çıkarılan metin kalıcı olarak saklanmaz.
+- Uygulama PDF sayfasının görselini değil, çıkarılan metni gösterir.
 
-## License
+## Onun için yapıldı.
+
+## Lisans
 
 MIT
