@@ -2,7 +2,7 @@
 
 Senkronize kelime vurgulama özelliğine sahip, sade ve yerel bir macOS PDF seslendirme uygulaması.
 
-<!-- Ekran görüntüsü: docs/ss.png -->
+Ekran görüntüsü: docs/ss.png 
 
 ## Özellikler
 
@@ -16,10 +16,6 @@ Senkronize kelime vurgulama özelliğine sahip, sade ve yerel bir macOS PDF sesl
 - Apple Vision ile taranmış sayfalarda OCR çalıştırma
 - Açık ve koyu görünüm desteği
 
-## Gereksinimler
-
-- macOS 13 veya üzeri
-- Xcode 15 veya üzeri
 
 ## Çalıştırma
 
