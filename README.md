@@ -2,7 +2,7 @@
 
 Senkronize kelime vurgulama özelliğine sahip, sade ve yerel bir macOS PDF seslendirme uygulaması.
 
-Ekran görüntüsü: docs/ss.png 
+![pdf/voice uygulama ekran görüntüsü](docs/ss.png)
 
 ## Özellikler
 
